@@ -1,0 +1,18 @@
+<h1>Your Product Details</h1>
+<p>
+    Name:<%=@product_detail.name%>
+</p>
+<p>
+    Category:<%=@product_detail.category%>
+</p>
+<p>
+    Price:<%=@product_detail.price%>
+</p>
+<h2>Comments</h2>
+<%= render @product_detail.comments %>
+
+<h2>Add Comment</h2>
+<%=render 'comments/form'%>
+
+<p><%= link_to 'Edit', edit_product_detail_path(@product_detail) %> |
+<%= link_to 'Back', product_details_path %></p>
